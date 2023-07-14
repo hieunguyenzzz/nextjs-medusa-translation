@@ -26,7 +26,7 @@ export default async function handler(
   if (limit && !search) {
     spanish = await translationAdapter.find<Translation>({targetLanguage: locale}).limit(20).toArray();
   } else {
-    if (search) {
+    if (search && !Array.isArray(search)) {
       const regex = new RegExp(search, "i");
       spanish = await translationAdapter.find<Translation>({targetLanguage: locale, text: regex}).toArray();
     } else {
