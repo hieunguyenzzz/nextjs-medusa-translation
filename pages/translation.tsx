@@ -17,6 +17,8 @@ const TranslationPage = () => {
     const languageOptions = [
         { value: 'nl', label: 'Dutch' },
         { value: 'es', label: 'Spain' },
+        { value: 'no', label: 'Norway' },
+        { value: 'fr', label: 'France' },
     ];
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
